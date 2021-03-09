@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>CRUD firebase</title>
+</head>
+
+<body>
+
+    <div class="container p-4">
+
+        <div class="row">
+            <div class="cow-md-4 6">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="task-form">
+                            <h3>Título</h3>
+                            <div class="form-group ">
+
+                                <input type="text" id="task-title" class="form-control" placeholder="Digite o título">
+
+                            </div>
+                            <h3>Descrição</h3>
+                            <div class="form-group">
+
+                                <textarea id="task-description" rows="3" class="form-control" placeholder="Descrição"></textarea>
+
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" id="btn-task-form">Salvar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" id="tasks-container"></div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            //Suas chaves devem ser colocadas aqui!
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
